@@ -1,9 +1,9 @@
 
-function izracunPlaca ( { brojSatiMjesecno, brojNocnih, brojPopodne, brojSubota, brojNedjelja, brojPrekovremeni, brojBlagdan, stopaPrireza } ) {
+function izracunPlaca ( { brojSatiMjesecno, brojNocnih, brojPopodne, brojSubota, brojNedjelja, brojPrekovremeni, brojBlagdan, godineStaza, stopaPrireza } ) {
 
     let osnovica = 5211.20; 
     let koeficijentPlace = 1.794; 
-    let osnovnaPlaca = osnovica * koeficijentPlace;
+    let osnovnaPlaca = osnovica * koeficijentPlace * (1 + 0.005 * godineStaza);
     let dodatakHitna = osnovnaPlaca * 0.20;
     let polozajniDodatak = osnovnaPlaca * 0.12;
     let osnovnaSatnica = osnovnaPlaca / brojSatiMjesecno;
