@@ -11,6 +11,11 @@ const InputForm = ({formCallback}) => (
   <form id="mainForm">
     <InputFieldGroup
       type="number"
+      label="Godine Staža"
+      name='godineStaza'
+    />
+    <InputFieldGroup
+      type="number"
       label="Broj sati mjesecno"
       name='brojSatiMjesecno'
     />
