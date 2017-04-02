@@ -26,7 +26,7 @@ const InputForm = ({formCallback}) => (
     />
     <InputFieldGroup
       type="number"
-      label="Broj dnevnih sati"
+      label="Broj popodnevnih sati"
       name='brojPopodne'
     />
     <InputFieldGroup
@@ -57,7 +57,7 @@ const InputForm = ({formCallback}) => (
 
     <Row>
       <Col xs={12}>
-        <Checkbox defaultChecked>
+        <Checkbox defaultChecked name="hitna" value="1">
           Hitna služba
         </Checkbox>
       </Col>
@@ -65,7 +65,7 @@ const InputForm = ({formCallback}) => (
 
     <Row>
       <Col xs={12}>
-        <Checkbox defaultChecked>
+        <Checkbox defaultChecked name="polozajni" value="1">
           Položajni dodatak
         </Checkbox>
       </Col>
