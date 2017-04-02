@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormControl, FormGroup, ControlLabel, Checkbox, Radio, Button} from 'react-bootstrap';
+import {FormControl, FormGroup, ControlLabel, Checkbox, Radio, Button, Row, Col} from 'react-bootstrap';
 import {FieldGroup} from './FieldGroup';
 
 import {InputFieldGroup} from './InputFieldGroup';
@@ -50,13 +50,21 @@ const InputForm = ({formCallback}) => (
       name='stopaPrireza'
     />
 
-    <Checkbox defaultChecked>
-      Hitna služba
-    </Checkbox>
+    <Row>
+      <Col xs={12}>
+        <Checkbox defaultChecked>
+          Hitna služba
+        </Checkbox>
+      </Col>
+    </Row>
 
-    <Checkbox defaultChecked>
-      Položajni dodatak
-    </Checkbox>
+    <Row>
+      <Col xs={12}>
+        <Checkbox defaultChecked>
+          Položajni dodatak
+        </Checkbox>
+      </Col>
+    </Row>
 
     {/*
     <InputFieldGroup
@@ -127,9 +135,14 @@ const InputForm = ({formCallback}) => (
       </FormControl.Static>
     </FormGroup>*/}
 
-    <Button type="button" onClick={formCallback}>
-      Calculate
-    </Button>
+    <Row>
+      <Col xs={12}>
+        <Button type="button" onClick={formCallback}>
+          Calculate
+        </Button>
+      </Col>
+    </Row>
+    
   </form>
 );
 
