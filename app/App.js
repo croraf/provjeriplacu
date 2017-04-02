@@ -47,13 +47,13 @@ class App extends React.Component {
                 <Grid>
                     <Row>
 
-                        <Col xs={0} md={2} />
+                        <Col xs={0} md={1} />
 
                         <Col xs={4} md={3}>
                             <InputForm formCallback={this.formCallback}/>
                         </Col>
 
-                        <Col xs={0} md={1} />
+                        <Col xs={0} md={2} />
 
 
                         <Col xs={8} md={5}>
