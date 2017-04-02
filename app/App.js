@@ -41,19 +41,28 @@ class App extends React.Component {
 
         return (
             <div>
-                <PageHeader style={{textAlign: 'center'}}>Kalkulator plate</PageHeader>
+                <PageHeader style={{textAlign: 'center'}}>
+                    <Grid>
+                        <Row>
+                            <Col xs={6} xsOffset={3}> Kalkulator plaće </Col>
+                            <Col xs={3}> 
+                                <Button type="button" onClick={this.showHideOptionalCallback}>
+                                    Show/Hide full data
+                                </Button>
+                            </Col>
+                        </Row>
+                    </Grid>
+                </PageHeader>
                 <Grid>
                     <Row>
                         <Col xs={4} md={3}>
                             <InputForm formCallback={this.formCallback}/>
 
-                            <Row>
+                            {/*<Row>
                                 <Col xs={12}>
-                                    <Button type="button" onClick={this.showHideOptionalCallback}>
-                                        Show/Hide full data
-                                    </Button>
+                                    
                                 </Col>
-                            </Row>
+                            </Row>*/}
                         </Col>
 
                         <Col xs={0} md={1} />
