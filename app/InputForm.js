@@ -16,7 +16,7 @@ const InputForm = ({formCallback}) => (
     />
     <InputFieldGroup
       type="number"
-      label="Broj sati mjesecno"
+      label="Redovna mjesečna satnica"
       name='brojSatiMjesecno'
     />
     <InputFieldGroup

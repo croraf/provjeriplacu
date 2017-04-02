@@ -21,7 +21,7 @@ class App extends React.Component {
         
         let formDataObject = {};
         for (let entry of formData) {
-            formDataObject[entry[0]] = parseFloat(entry[1]) || 0;
+            formDataObject[entry[0]] = parseFloat(entry[1]).toFixed(2) || 0;
         }
 
 
