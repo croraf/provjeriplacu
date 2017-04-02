@@ -36,9 +36,11 @@ const PayResults = ({osnovica, koeficijentPlace, osnovnaPlaca, dodatakHitna, pol
       <OutputFieldGroup
         label="Osnovna satnica"
         value={osnovnaSatnica}
+        hidden={hideOptional}
       />
 
-      <Col xs={6} md={6}/>
+      <Col xs={6} md={6} 
+        hidden={hideOptional}/>
       <Clearfix />
 
       <OutputFieldGroup
@@ -78,6 +80,7 @@ const PayResults = ({osnovica, koeficijentPlace, osnovnaPlaca, dodatakHitna, pol
       <OutputFieldGroup
         label="Dohodak"
         value={dohodak}
+        hidden={hideOptional}
       />
       <OutputFieldGroup
         label="Porezna olaksica"

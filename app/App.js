@@ -1,8 +1,9 @@
 import React from 'react';
-import {PageHeader, Grid, Row, Col, Button} from 'react-bootstrap';
+import {Grid, Row, Col} from 'react-bootstrap';
 
 import {InputForm} from './InputForm';
 import {PayResults} from './PayResults';
+import {MyHeader} from './MyHeader';
 
 import {izracunPlaca} from './izracunPlaca';
 
@@ -41,33 +42,21 @@ class App extends React.Component {
 
         return (
             <div>
-                <PageHeader style={{textAlign: 'center'}}>
-                    <Grid>
-                        <Row>
-                            <Col xs={6} xsOffset={3}> Kalkulator plaće </Col>
-                            <Col xs={3}> 
-                                <Button type="button" onClick={this.showHideOptionalCallback}>
-                                    Show/Hide full data
-                                </Button>
-                            </Col>
-                        </Row>
-                    </Grid>
-                </PageHeader>
+                <MyHeader showHideOptionalCallback={this.showHideOptionalCallback}/>
+                
                 <Grid>
                     <Row>
+
+                        <Col xs={0} md={2} />
+
                         <Col xs={4} md={3}>
                             <InputForm formCallback={this.formCallback}/>
-
-                            {/*<Row>
-                                <Col xs={12}>
-                                    
-                                </Col>
-                            </Row>*/}
                         </Col>
 
                         <Col xs={0} md={1} />
 
-                        <Col xs={8} md={6}>
+
+                        <Col xs={8} md={5}>
                             <PayResults {...this.state.izracunPlaca} hideOptional={this.state.hideOptional}/>
                         </Col>
                     </Row>
