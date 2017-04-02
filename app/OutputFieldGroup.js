@@ -12,7 +12,7 @@ const OutputFieldGroup = ({ label, value, hidden }) => (
             label={label}
             placeholder="Result"
             readOnly
-            value={value}
+            value={value ? value.toFixed(2) : value}
             />
         </Col>
     )
