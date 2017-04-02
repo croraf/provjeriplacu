@@ -23,11 +23,13 @@ const InputForm = ({formCallback}) => (
       type="number"
       label="Broj noćnih sati"
       name='brojNocnih'
+      infoNote="22h-06h"
     />
     <InputFieldGroup
       type="number"
       label="Broj popodnevnih sati"
       name='brojPopodne'
+      infoNote="14h-22h"
     />
     <InputFieldGroup
       type="number"
@@ -71,74 +73,6 @@ const InputForm = ({formCallback}) => (
       </Col>
     </Row>
 
-    {/*
-    <InputFieldGroup
-      id="formControlsFile"
-      type="file"
-      label="File"
-      help="Example block-level help text here."
-    />
-
-    <Checkbox checked readOnly>
-      Checkbox
-    </Checkbox>
-    <Radio checked readOnly>
-      Radio
-    </Radio>
-
-    <FormGroup>
-      <Checkbox inline>
-        1
-      </Checkbox>
-      {' '}
-      <Checkbox inline>
-        2
-      </Checkbox>
-      {' '}
-      <Checkbox inline>
-        3
-      </Checkbox>
-    </FormGroup>
-    <FormGroup>
-      <Radio inline>
-        1
-      </Radio>
-      {' '}
-      <Radio inline>
-        2
-      </Radio>
-      {' '}
-      <Radio inline>
-        3
-      </Radio>
-    </FormGroup>
-
-    <FormGroup controlId="formControlsSelect">
-      <ControlLabel>Select</ControlLabel>
-      <FormControl componentClass="select" placeholder="select">
-        <option value="select">select</option>
-        <option value="other">...</option>
-      </FormControl>
-    </FormGroup>
-    <FormGroup controlId="formControlsSelectMultiple">
-      <ControlLabel>Multiple select</ControlLabel>
-      <FormControl componentClass="select" multiple>
-        <option value="select">select (multiple)</option>
-        <option value="other">...</option>
-      </FormControl>
-    </FormGroup>
-
-    <FormGroup controlId="formControlsTextarea">
-      <ControlLabel>Textarea</ControlLabel>
-      <FormControl componentClass="textarea" placeholder="textarea" />
-    </FormGroup>
-
-    <FormGroup>
-      <ControlLabel>Static text</ControlLabel>
-      <FormControl.Static>
-        email@example.com
-      </FormControl.Static>
-    </FormGroup>*/}
 
     <Row>
       <Col xs={12}>
