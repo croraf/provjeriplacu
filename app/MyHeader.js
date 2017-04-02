@@ -6,8 +6,8 @@ let MyHeader = ({showHideOptionalCallback}) => (
         <PageHeader style={{textAlign: 'center'}}>
             <Grid>
                 <Row>
-                    <Col xs={6} xsOffset={3}> Kalkulator plaće </Col>
-                    <Col xs={3}> 
+                    <Col xs={6} xsOffset={3} lg={4} lgOffset={4}> Kalkulator plaće </Col>
+                    <Col xs={3} lg={2}> 
                         <Button type="button" onClick={showHideOptionalCallback}>
                             Show/Hide full data
                         </Button>
