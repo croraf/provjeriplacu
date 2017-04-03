@@ -17,10 +17,10 @@ let MyHeader = ({showHideOptionalCallback}) => (
             </Grid>
         </PageHeader>
         <div style={{textAlign: 'center'}}>
-            BITNO: Unijeti <strong>odvojeno</strong> ukupan broj redovnih sati, broj prekovremenih sati, 
-            broj popodnevnih sati, subota, nedjelja, noc,...! <br />
-            Na primjer, ukoliko je smjena petak 22h do subota 06h, unosimo 8 redovnih sati,  
-            <strong> ujedno i</strong> 6 sati subote, te 8 sati noćnog rada. <br />
+            Primjer: Ukoliko je smjena subota 19:00 do nedjelja 7:00, 
+            unosimo 5 sati subote, 7 sati nedjelje te 8 sati noćnog rada. <br />
+            Primjer: Ukoliko je smjena ponedjeljak blagdan 7:00-19:00, 
+            unosimo 5 sati popodnevnog rada i 12 sati blaganskog rada.
         </div>
     </Well>
 );

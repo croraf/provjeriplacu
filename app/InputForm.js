@@ -16,8 +16,9 @@ const InputForm = ({formCallback}) => (
     />
     <InputFieldGroup
       type="number"
-      label="Redovna mjesečna satnica"
+      label="Redovan mjesečni fond sati"
       name='brojSatiMjesecno'
+      infoNote="Zadan ukupni mjesečni fond sati. Jednak za sve službenike."
     />
     <InputFieldGroup
       type="number"
