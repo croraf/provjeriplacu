@@ -2,8 +2,8 @@ import React from 'react';
 import {PageHeader, Grid, Row, Col, Button, Well, Glyphicon} from 'react-bootstrap';
 
 let MyHeader = ({showHideOptionalCallback, showHideNoteCallback, showNote}) => (
-    <Well style={{paddingBottom: '0px'}}>
-        <PageHeader style={{textAlign: 'center', marginBottom: '0px'}}>
+    <Well style={{paddingBottom: '0px', paddingTop: '0px'}}>
+        <PageHeader style={{textAlign: 'center', marginBottom: '0px', marginTop: '0px'}}>
             <Grid>
                 <Row>
                     <Col xs={6} xsOffset={3} lg={4} lgOffset={4}> Kalkulator plaće </Col>

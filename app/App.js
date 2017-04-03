@@ -62,7 +62,7 @@ class App extends React.Component {
                         <Col xs={0} md={1} lg={2}/>
 
                         <Col xs={5} md={4} lg={3}>
-                            <ScrollingContainer header='Parametri' bsStyle='info'>
+                            <ScrollingContainer header='Parametri' bsStyle={'primary'}>
                                 <InputForm formCallback={this.formCallback}/>
                             </ScrollingContainer>
                         </Col>
@@ -80,10 +80,10 @@ class App extends React.Component {
 
                 <div 
                     style={{
-                        height: "60px", 
+                        height: "20px", 
                         backgroundColor: '#f5f5f5',
-                        paddingTop: '40px',
-                        marginTop: '20px',
+                        paddingTop: '5px',
+                        marginTop: '10px',
                         textAlign: 'center'
                     }}> 
                     Credits: Vedran Rafaelic, Petar Beslic 
