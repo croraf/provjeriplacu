@@ -21,7 +21,7 @@ let MyHeader = ({showHideOptionalCallback, showHideNoteCallback, showNote}) => (
             Primjer: Ukoliko je smjena subota 19:00 do nedjelja 7:00, 
             unosimo 5 sati subote, 7 sati nedjelje te 8 sati noćnog rada. <br />
             Primjer: Ukoliko je smjena ponedjeljak blagdan 7:00-19:00, 
-            unosimo 5 sati popodnevnog rada i 12 sati blaganskog rada.
+            unosimo 5 sati popodnevnog rada i 12 sati blaganskog rada. Ja sam rafo
         </div>) : null}
         <div style={{textAlign: 'center'}}>
             <Glyphicon 
