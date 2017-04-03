@@ -7,7 +7,7 @@ let MyHeader = ({showHideOptionalCallback, showHideNoteCallback, showNote}) => (
             <Grid>
                 <Row>
                     <Col xs={6} xsOffset={3} lg={4} lgOffset={4}> Kalkulator plaće </Col>
-                    <Col xs={3} lg={2}> 
+                    <Col xs={3} lg={1}> 
                         <Button type="button" onClick={showHideOptionalCallback}>
                             Show/Hide full data
                         </Button>

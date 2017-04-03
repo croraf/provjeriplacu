@@ -4,6 +4,7 @@ import {Grid, Row, Col} from 'react-bootstrap';
 import {InputForm} from './InputForm';
 import {PayResults} from './PayResults';
 import {MyHeader} from './MyHeader';
+import {ScrollingContainer} from './ScrollingContainer';
 
 import {izracunPlaca} from './izracunPlaca';
 
@@ -58,17 +59,21 @@ class App extends React.Component {
                 <Grid>
                     <Row>
 
-                        <Col xs={0} md={2} />
+                        <Col xs={0} md={1} lg={2}/>
 
-                        <Col xs={4} md={3} >
-                            <InputForm formCallback={this.formCallback}/>
+                        <Col xs={5} md={4} lg={3}>
+                            <ScrollingContainer header='Parametri' bsStyle='info'>
+                                <InputForm formCallback={this.formCallback}/>
+                            </ScrollingContainer>
                         </Col>
 
                         <Col xs={0} md={0} />
 
 
-                        <Col xs={8} md={5}>
-                            <PayResults {...this.state.izracunPlaca} hideOptional={this.state.hideOptional}/>
+                        <Col xs={7} md={6} lg={5}>
+                            <ScrollingContainer header='Rezultati'>
+                                <PayResults {...this.state.izracunPlaca} hideOptional={this.state.hideOptional}/>
+                            </ScrollingContainer>
                         </Col>
                     </Row>
                 </Grid>
