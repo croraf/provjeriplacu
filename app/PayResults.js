@@ -28,10 +28,12 @@ const PayResults = ({osnovica, koeficijentPlace, osnovnaPlaca, dodatakHitna, pol
       <OutputFieldGroup
         label="Dodatak Hitna"
         value={dodatakHitna}
+        hidden={hideOptional}
       />
       <OutputFieldGroup
         label="Polozajni dodatak"
         value={polozajniDodatak}
+        hidden={hideOptional}
       />
       <OutputFieldGroup
         label="Osnovna satnica"

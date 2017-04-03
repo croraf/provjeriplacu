@@ -18,7 +18,7 @@ const InputForm = ({formCallback}) => (
       type="number"
       label="Redovan mjesečni fond sati"
       name='brojSatiMjesecno'
-      infoNote="Zadan ukupni mjesečni fond sati. Jednak za sve službenike."
+      infoNote="Ukupni mjesečni fond sati. Jednak za sve službenike."
     />
     <InputFieldGroup
       type="number"
