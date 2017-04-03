@@ -8,6 +8,7 @@ const InputFieldGroup = ({ name, label, help, infoNote, ...props }) => (
         <Col xs={12}>
             <FieldGroup
                 help={help}
+                type='number'
                 label={label}
                 placeholder="Unesi"
                 name={name}
