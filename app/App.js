@@ -12,6 +12,7 @@ class App extends React.Component {
         super();
         this.state = {
             hideOptional: true,
+            showNote: true,
             izracunPlaca: {}
         };
     }
@@ -38,11 +39,21 @@ class App extends React.Component {
         );
     }
 
+    showHideNoteCallback = () => {
+        this.setState((prevState) => ({
+                showNote: !prevState.showNote
+            })
+        );
+    }
+
     render () {
 
         return (
             <div>
-                <MyHeader showHideOptionalCallback={this.showHideOptionalCallback}/>
+                <MyHeader 
+                    showHideOptionalCallback={this.showHideOptionalCallback} 
+                    showHideNoteCallback={this.showHideNoteCallback} 
+                    showNote={this.state.showNote}/>
                 
                 <Grid>
                     <Row>
