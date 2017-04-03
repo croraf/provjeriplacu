@@ -58,6 +58,15 @@ const InputForm = ({formCallback}) => (
       name='stopaPrireza'
     />
 
+    <FormGroup controlId="formControlsSelect">
+      <ControlLabel>Radno mjesto</ControlLabel>
+      <FormControl componentClass="select" placeholder="select">
+        <option value='lijecnikHitna'>Liječnik HMP </option>
+        <option value='medicinskiTehnicar'>Medicinski tehničar</option>
+        <option value='vozacHitna'>Vozač HMP</option>
+      </FormControl>
+    </FormGroup>
+
     <Row>
       <Col xs={12}>
         <Checkbox defaultChecked name="hitna" value="1">
