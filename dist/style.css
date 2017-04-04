@@ -4,8 +4,8 @@
 
 /* The animation code */
 @keyframes example {
-    from {left: -30%;}
-    to {left: 130%;}
+    from {margin-left: -30%;}
+    to {margin-left: 130%;}
 }
 
 #creditsBar{
@@ -13,18 +13,23 @@
     height: 30px; 
     background-color: #e8e8e8;
     padding-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow-x: hidden;
     margin-top: 5px;
 }
 
 #creditsBarText {
+    display: inline-block;
+    white-space: nowrap;
     animation-name: example;
-    animation-duration: 30s;
+    animation-duration: 10s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    position: relative;
+    //position: relative;
     //padding-left: this.state.paddingLeft + '%'
 }
 
-body {
+/*body {
     overflow-x: hidden;
-}
+}*/
