@@ -57,6 +57,11 @@ const InputForm = ({formCallback}) => (
       label="Stopa prireza (npr 0.18)"
       name='stopaPrireza'
     />
+    <InputFieldGroup
+      type="number"
+      label="Uzdržavani članovi"
+      name='uzdrzavaniClanovi'
+    />
 
     <FormGroup controlId="formControlsSelect">
       <ControlLabel>Radno mjesto</ControlLabel>

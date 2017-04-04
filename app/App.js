@@ -52,7 +52,6 @@ class App extends React.Component {
         return (
             <div>
                 <MyHeader 
-                    showHideOptionalCallback={this.showHideOptionalCallback} 
                     showHideNoteCallback={this.showHideNoteCallback} 
                     showNote={this.state.showNote}/>
                 
@@ -62,7 +61,7 @@ class App extends React.Component {
                         <Col xs={0} md={1} lg={2}/>
 
                         <Col xs={5} md={4} lg={3}>
-                            <ScrollingContainer header='Parametri' bsStyle={'primary'}>
+                            <ScrollingContainer headerText='Parametri' bsStyle={'primary'}>
                                 <InputForm formCallback={this.formCallback}/>
                             </ScrollingContainer>
                         </Col>
@@ -72,7 +71,7 @@ class App extends React.Component {
 
 
                         <Col xs={7} md={6} lg={5}>
-                            <ScrollingContainer header='Rezultati'>
+                            <ScrollingContainer headerText='Rezultati' showHideOptionalCallback={this.showHideOptionalCallback} >
                                 <PayResults {...this.state.izracunPlaca} hideOptional={this.state.hideOptional}/>
                             </ScrollingContainer>
                         </Col>

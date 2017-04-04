@@ -20,6 +20,7 @@ const PayResults = ({osnovica, koeficijentPlace, osnovnaPlaca, dodatakHitna, pol
       <OutputFieldGroup
         label="Osnovna placa"
         value={osnovnaPlaca}
+        hidden={hideOptional}
       />
 
       <Col xs={6} md={6}/>

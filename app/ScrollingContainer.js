@@ -1,9 +1,27 @@
 import React from 'react';
-import {Panel} from 'react-bootstrap';
+import {Panel, Button} from 'react-bootstrap';
 
-function ScrollingContainer({ children, header, bsStyle }) {
+/*<Col xs={3} md={1} lg={1}> 
+                        
+                    </Col>*/
+
+function MyPanelHeader ({text, callback}) {
+    return(
+        <div>
+            {text}
+            { 
+                callback ? 
+                (<Button type="button" onClick={callback} className='btn-xs' style={{float: 'right'}}>
+                    Show/Hide full data
+                </Button>) : null
+            }
+        </div>
+    );
+}
+
+function ScrollingContainer({ children, headerText, bsStyle, showHideOptionalCallback }) {
     return (
-        <Panel header={header} style={{padding: '0px'}} bsStyle={bsStyle}>
+        <Panel header={<MyPanelHeader text={headerText} callback={showHideOptionalCallback} />} style={{padding: '0px'}} bsStyle={bsStyle}>
             <div style={{overflowY: 'scroll', height:'500px', padding: '15px'}}>
                 {children}
             </div>
