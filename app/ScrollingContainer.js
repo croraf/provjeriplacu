@@ -1,5 +1,5 @@
 import React from 'react';
-import {Panel, Button} from 'react-bootstrap';
+import {Panel, Button, Grid, Row, Col} from 'react-bootstrap';
 
 /*<Col xs={3} md={1} lg={1}> 
                         
@@ -7,15 +7,18 @@ import {Panel, Button} from 'react-bootstrap';
 
 function MyPanelHeader ({text, callback}) {
     return(
-        <div>
-            {text}
-            { 
-                callback ? 
-                (<Button type="button" onClick={callback} className='btn-xs' style={{float: 'right'}}>
-                    Show/Hide full data
-                </Button>) : null
-            }
-        </div>
+            <Row>
+                <Col xs={6}>{text}</Col>
+                <Col xs={6} style={{textAlign: 'right'}}>
+                    { 
+                        callback ? 
+                        (<Button type="button" onClick={callback} className='btn-xs' >
+                            Show/Hide details
+                        </Button>) : null
+                    }
+                </Col>
+            </Row>
+            
     );
 }
 
