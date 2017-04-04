@@ -5,6 +5,7 @@ import {InputForm} from './InputForm';
 import {PayResults} from './PayResults';
 import {MyHeader} from './MyHeader';
 import {ScrollingContainer} from './ScrollingContainer';
+import {CreditsBar} from './CreditsBar';
 
 import {izracunPlaca} from './izracunPlaca';
 
@@ -78,16 +79,7 @@ class App extends React.Component {
                     </Row>
                 </Grid>
 
-                <div 
-                    style={{
-                        height: "20px", 
-                        backgroundColor: '#f5f5f5',
-                        paddingTop: '5px',
-                        marginTop: '10px',
-                        textAlign: 'center'
-                    }}> 
-                    Credits: Vedran Rafaelic, Petar Beslic 
-                </div>
+                <CreditsBar />
             </div>
         );
     }
