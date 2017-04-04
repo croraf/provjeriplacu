@@ -23,7 +23,7 @@
     display: inline-block;
     white-space: nowrap;
     animation-name: example;
-    animation-duration: 10s;
+    animation-duration: 30s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     //position: relative;
