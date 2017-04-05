@@ -4,7 +4,7 @@ import {Row, Col, Clearfix} from 'react-bootstrap';
 
 
 const PayResults = ({osnovica, koeficijentPlace, osnovnaPlaca, osnovnaSatnica,
-                     nocniSat, popodnevniSat, subotaSat, nedjeljaSat, prekovremeniSat, blagdanSat, brutoPlaca,
+                     dodatnoNocni, dodatnoPopodnevni, dodatnoSubotnji, dodatnoNedjeljni, dodatnoPrekovremeni, dodatnoBlagdanski, brutoPlaca,
                      dohodak, poreznaOlaksica, poreznaOsnovica, porez24, porez36, ukupniPorez, prirez, nettoPlaca, hideOptional}) => (
   <form>
     <Row>
@@ -26,7 +26,7 @@ const PayResults = ({osnovica, koeficijentPlace, osnovnaPlaca, osnovnaSatnica,
 
       <Col xs={6} md={6}/>
       <Clearfix />
-      
+
       <OutputFieldGroup
         label="Osnovna satnica"
         value={osnovnaSatnica}
@@ -39,32 +39,32 @@ const PayResults = ({osnovica, koeficijentPlace, osnovnaPlaca, osnovnaSatnica,
 
       <OutputFieldGroup
         label="Nocni sat"
-        value={nocniSat}
+        value={dodatnoNocni}
         hidden={hideOptional}
       />
       <OutputFieldGroup
         label="Popodnevni sat"
-        value={popodnevniSat}
+        value={dodatnoPopodnevni}
         hidden={hideOptional}
       />
       <OutputFieldGroup
         label="Subota sat"
-        value={subotaSat}
+        value={dodatnoSubotnji}
         hidden={hideOptional}
       />
       <OutputFieldGroup
         label="Nedjelja sat"
-        value={nedjeljaSat}
+        value={dodatnoNedjeljni}
         hidden={hideOptional}
       />
       <OutputFieldGroup
         label="Prekovremeni sat"
-        value={prekovremeniSat}
+        value={dodatnoPrekovremeni}
         hidden={hideOptional}
       />
       <OutputFieldGroup
         label="Blagdan sat"
-        value={blagdanSat}
+        value={dodatnoBlagdanski}
         hidden={hideOptional}
       />
       <OutputFieldGroup

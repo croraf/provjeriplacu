@@ -1,6 +1,6 @@
 
 function izracunPlaca ( { godineStaza, brojSatiMjesecno, brojNocnih, brojPopodne, brojSubota, brojNedjelja, brojPrekovremeni, brojBlagdan, 
-                            stopaPrireza, hitna, lijecnicki, brojDjece, brojUzdrzavanih, invalidnost, profesija } ) {
+                            stopaPrireza, brojDjece, brojUzdrzavanih, invalidnost, profesija } ) {
 
     let olaksicaZaDjecu;
 
@@ -72,9 +72,9 @@ function izracunPlaca ( { godineStaza, brojSatiMjesecno, brojNocnih, brojPopodne
     
 
     let osnovica = 5211.20; 
-    let koeficijentPlace; 
-    let koeficijentDodatkaNaProfesiju;
-    let koeficijentDodatkaNaProfesiju2;
+    let koeficijentPlace = 0; 
+    let koeficijentDodatkaNaProfesiju = 0;
+    let koeficijentDodatkaNaProfesiju2 = 0;
     switch(profesija){
         case 'lijecnikHMP':
             koeficijentPlace = 1.794;
@@ -88,10 +88,12 @@ function izracunPlaca ( { godineStaza, brojSatiMjesecno, brojNocnih, brojPopodne
         case 'medicinskiTehnicar':
             koeficijentPlace = 1.067;
             koeficijentDodatkaNaProfesiju = 0.04;
+            koeficijentDodatkaNaProfesiju2 = 0.2;
             break;
         case 'vozacHMP':
             koeficijentPlace = 0.951;
             koeficijentDodatkaNaProfesiju = 0.04;
+            koeficijentDodatkaNaProfesiju2 = 0.2;
             break;
         case 'default':
             window.console.log('nepoznata profesija');
@@ -100,18 +102,18 @@ function izracunPlaca ( { godineStaza, brojSatiMjesecno, brojNocnih, brojPopodne
     let dodatakNaProfesiju = osnovnaPlaca * koeficijentDodatkaNaProfesiju;
     let dodatakNaProfesiju2 = osnovnaPlaca * koeficijentDodatkaNaProfesiju2;
     let osnovnaSatnica = osnovnaPlaca / brojSatiMjesecno;
-    let nocniSat = osnovnaSatnica * 0.4 * brojNocnih;
-    let popodnevniSat = osnovnaSatnica * 0.1 * brojPopodne;
-    let subotaSat = osnovnaSatnica * 0.25 * brojSubota;
-    let nedjeljaSat = osnovnaSatnica * 0.35 * brojNedjelja;
-    let prekovremeniSat = osnovnaSatnica * 1.5 * brojPrekovremeni;
-    let blagdanSat = osnovnaSatnica * 1.5 * brojBlagdan;
+    let dodatnoNocni = osnovnaSatnica * 0.4 * brojNocnih;
+    let dodatnoPopodnevni = osnovnaSatnica * 0.1 * brojPopodne;
+    let dodatnoSubotnji = osnovnaSatnica * 0.25 * brojSubota;
+    let dodatnoNedjeljni = osnovnaSatnica * 0.35 * brojNedjelja;
+    let dodatnoPrekovremeni = osnovnaSatnica * 1.5 * brojPrekovremeni;
+    let dodatnoBlagdanski = osnovnaSatnica * 1.5 * brojBlagdan;
 
     let brutoPlaca = osnovnaPlaca + dodatakNaProfesiju + dodatakNaProfesiju2 + 
-                     nocniSat + popodnevniSat + subotaSat + nedjeljaSat + prekovremeniSat + blagdanSat;
+                     dodatnoNocni + dodatnoPopodnevni + dodatnoSubotnji + dodatnoNedjeljni + dodatnoPrekovremeni + dodatnoBlagdanski;
     let dohodak = brutoPlaca - (brutoPlaca * 0.15) - (brutoPlaca * 0.05);
     let poreznaOlaksica = 3800 + olaksicaZaDjecu + odbitakZaUzdrzavaneClanove + odbitakZaInvaliditet;
-    let poreznaOsnovica = dohodak - poreznaOlaksica;
+    let poreznaOsnovica = dohodak < poreznaOlaksica ? 0 : dohodak - poreznaOlaksica;
     let porez24 = poreznaOsnovica < 17500 ? poreznaOsnovica * 0.24 : 17500 * 0.24 ;
     let porez36 = poreznaOsnovica > 17500 ? ( poreznaOsnovica - 17500 ) * 0.36 : 0; 
     let ukupniPorez = porez24 + porez36;
@@ -123,12 +125,12 @@ function izracunPlaca ( { godineStaza, brojSatiMjesecno, brojNocnih, brojPopodne
         koeficijentPlace,
         osnovnaPlaca,
         osnovnaSatnica,
-        nocniSat,
-        popodnevniSat,
-        subotaSat,
-        nedjeljaSat,
-        prekovremeniSat,
-        blagdanSat,
+        dodatnoNocni,
+        dodatnoPopodnevni,
+        dodatnoSubotnji,
+        dodatnoNedjeljni,
+        dodatnoPrekovremeni,
+        dodatnoBlagdanski,
 
         brutoPlaca,
         dohodak,

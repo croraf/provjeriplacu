@@ -26,7 +26,13 @@ class App extends React.Component {
         let formDataObject = {};
         for (let entry of formData) {
             console.log(entry);
-            formDataObject[entry[0]] = parseFloat(entry[1]) || entry[1];
+            let parsedNumericInput = parseFloat(entry[1]);
+            
+            if (isNaN(parsedNumericInput)){
+                formDataObject[entry[0]] = entry[1];
+            } else {
+                formDataObject[entry[0]] = parsedNumericInput;
+            };
         }
 
 
