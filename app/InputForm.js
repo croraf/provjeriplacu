@@ -13,6 +13,7 @@ const InputForm = ({formCallback}) => (
       type="number"
       label="Godine Staža"
       name='godineStaza'
+      min='0'
     />
     <InputFieldGroup
       type="number"
@@ -59,20 +60,35 @@ const InputForm = ({formCallback}) => (
     />
     <InputFieldGroup
       type="number"
+      label="Broj djece"
+      name='brojDjece'
+    />
+    <InputFieldGroup
+      type="number"
       label="Uzdržavani članovi"
-      name='uzdrzavaniClanovi'
+      name='brojUzdrzavanih'
     />
 
-    <FormGroup controlId="formControlsSelect">
-      <ControlLabel>Radno mjesto</ControlLabel>
-      <FormControl componentClass="select" placeholder="select">
-        <option value='lijecnikHitna'>Liječnik HMP </option>
-        <option value='medicinskiTehnicar'>Medicinski tehničar</option>
-        <option value='vozacHitna'>Vozač HMP</option>
+    <FormGroup controlId="invalidnost">
+      <ControlLabel>Invalidnost</ControlLabel>
+      <FormControl componentClass="select" name='invalidnost' placeholder="select">
+        <option value='nema'>Nema</option>
+        <option value='djelomicna'>Djelomična</option>
+        <option value='stopostotna'>Stopostotna</option>
       </FormControl>
     </FormGroup>
 
-    <Row>
+    <FormGroup controlId="profesija">
+      <ControlLabel>Radno mjesto</ControlLabel>
+      <FormControl componentClass="select" name='profesija' placeholder="select">
+        <option value='lijecnikHMP'>Liječnik HMP</option>
+        <option value='lijecnik'>Liječnik</option>
+        <option value='medicinskiTehnicar'>Medicinski tehničar</option>
+        <option value='vozacHMP'>Vozač HMP</option>
+      </FormControl>
+    </FormGroup>
+
+    {/*<Row>
       <Col xs={12}>
         <Checkbox defaultChecked name="hitna" value="1">
           Hitna služba
@@ -86,7 +102,7 @@ const InputForm = ({formCallback}) => (
           Položajni dodatak
         </Checkbox>
       </Col>
-    </Row>
+    </Row>*/}
 
 
     <Row>

@@ -2,7 +2,8 @@ import React from 'react';
 import {OutputFieldGroup} from './OutputFieldGroup';
 import {Row, Col, Clearfix} from 'react-bootstrap';
 
-const PayResults = ({osnovica, koeficijentPlace, osnovnaPlaca, dodatakHitna, polozajniDodatak, osnovnaSatnica,
+
+const PayResults = ({osnovica, koeficijentPlace, osnovnaPlaca, osnovnaSatnica,
                      nocniSat, popodnevniSat, subotaSat, nedjeljaSat, prekovremeniSat, blagdanSat, brutoPlaca,
                      dohodak, poreznaOlaksica, poreznaOsnovica, porez24, porez36, ukupniPorez, prirez, nettoPlaca, hideOptional}) => (
   <form>
@@ -25,17 +26,7 @@ const PayResults = ({osnovica, koeficijentPlace, osnovnaPlaca, dodatakHitna, pol
 
       <Col xs={6} md={6}/>
       <Clearfix />
-
-      <OutputFieldGroup
-        label="Dodatak Hitna"
-        value={dodatakHitna}
-        hidden={hideOptional}
-      />
-      <OutputFieldGroup
-        label="Polozajni dodatak"
-        value={polozajniDodatak}
-        hidden={hideOptional}
-      />
+      
       <OutputFieldGroup
         label="Osnovna satnica"
         value={osnovnaSatnica}
@@ -122,5 +113,9 @@ const PayResults = ({osnovica, koeficijentPlace, osnovnaPlaca, dodatakHitna, pol
     </Row>
   </form>
 );
+
+PayResults.propTypes = {
+    osnovica: React.PropTypes.number.isRequired
+};
 
 export {PayResults};
