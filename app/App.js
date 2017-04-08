@@ -10,20 +10,16 @@ import {CreditsBar} from './CreditsBar';
 import {izracunPlaca} from './izracunPlaca';
 
 class App extends React.Component {
-    constructor() {
+    constructor(){
         super();
         this.state = {
-            hideOptional: true,
-            showNote: true,
-            izracunPlaca: {}
-        };
+            resultsObject: {}
+        }
     }
 
-    formCallback = () => {
+    formCallback = (formData) => {
         
-        let formData = new FormData(document.getElementById('mainForm'));
-        
-        let formDataObject = {};
+        /*let formDataObject = {};
         for (let entry of formData) {
             console.log(entry);
             let parsedNumericInput = parseFloat(entry[1]);
@@ -33,19 +29,12 @@ class App extends React.Component {
             } else {
                 formDataObject[entry[0]] = parsedNumericInput;
             };
-        }
+        }*/
 
 
         this.setState({
-            izracunPlaca: izracunPlaca(formDataObject)
+            resultsObject: izracunPlaca(formData)
         });
-    }
-
-    showHideOptionalCallback = () => {
-        this.setState((prevState) => ({
-                hideOptional: !prevState.hideOptional
-            })
-        );
     }
 
     render () {
@@ -61,7 +50,7 @@ class App extends React.Component {
 
                         <Col xs={5} md={4} lg={3}>
                             <ScrollingPanel headerText='Parametri' bsStyle={'primary'}>
-                                <InputForm formCallback={this.formCallback}/>
+                                <InputForm onSubmit={this.formCallback}/>
                             </ScrollingPanel>
                         </Col>
 
@@ -71,7 +60,7 @@ class App extends React.Component {
 
                         <Col xs={7} md={6} lg={5}>
                             <ScrollingPanel headerText='Rezultati' headerButtonActionType='HIDE_OPTIONAL' >
-                                <ResultsContainer {...this.state.izracunPlaca} hideOptional={this.state.hideOptional}/>
+                                <ResultsContainer {...this.state.resultsObject} />
                             </ScrollingPanel>
                         </Col>
                     </Row>

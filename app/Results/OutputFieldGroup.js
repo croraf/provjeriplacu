@@ -1,19 +1,17 @@
 import React from 'react';
 
-import {FieldGroup} from '../FieldGroup';
-import {Col} from 'react-bootstrap';
+import {Col, FormGroup, FormControl, ControlLabel} from 'react-bootstrap';
 
-const OutputFieldGroup = ({ label, value, hidden }) => (
+const OutputFieldGroup = ({ id, label, value, hidden }) => (
     
     hidden ? null : (
         <Col xs={6}>
-            <FieldGroup
-            type='text'
-            label={label}
-            placeholder="Result"
-            readOnly
-            value={value ? value.toFixed(2) : value}
-            />
+            <FormGroup controlId={id}>
+                <ControlLabel>
+                    {label}
+                </ControlLabel>
+                <FormControl type='text' placeholder='Result' readOnly value={value ? value.toFixed(2) : value} />
+            </FormGroup>
         </Col>
     )
 );

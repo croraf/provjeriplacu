@@ -114,8 +114,8 @@ const Results = ({osnovica, koeficijentPlace, osnovnaPlaca, osnovnaSatnica,
   </form>
 );
 
-Results.propTypes = {
+/*Results.propTypes = {
     osnovica: React.PropTypes.number.isRequired
-};
+};*/
 
 export {Results};
