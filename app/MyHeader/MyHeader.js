@@ -1,5 +1,5 @@
 import React from 'react';
-import {PageHeader, Grid, Row, Col, Button, Well, Glyphicon} from 'react-bootstrap';
+import {PageHeader, Well, Glyphicon} from 'react-bootstrap';
 
 let MyHeader = ({showHideNoteCallback, showNote}) => (
     <Well style={{paddingBottom: '0px', paddingTop: '0px'}}>

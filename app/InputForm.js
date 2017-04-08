@@ -50,6 +50,7 @@ class InputForm extends React.Component{
           name='godineStaza'
           value={this.state.godineStaza}
           onChange={this.inputFieldChangeHandler}
+          error
         />
         <InputFieldGroup
           type="number"

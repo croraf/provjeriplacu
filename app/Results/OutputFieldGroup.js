@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {FieldGroup} from './FieldGroup';
+import {FieldGroup} from '../FieldGroup';
 import {Col} from 'react-bootstrap';
 
 const OutputFieldGroup = ({ label, value, hidden }) => (

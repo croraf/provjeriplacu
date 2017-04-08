@@ -3,7 +3,7 @@ import {OutputFieldGroup} from './OutputFieldGroup';
 import {Row, Col, Clearfix} from 'react-bootstrap';
 
 
-const PayResults = ({osnovica, koeficijentPlace, osnovnaPlaca, osnovnaSatnica,
+const Results = ({osnovica, koeficijentPlace, osnovnaPlaca, osnovnaSatnica,
                      dodatnoNocni, dodatnoPopodnevni, dodatnoSubotnji, dodatnoNedjeljni, dodatnoPrekovremeni, dodatnoBlagdanski, brutoPlaca,
                      dohodak, poreznaOlaksica, poreznaOsnovica, porez24, porez36, ukupniPorez, prirez, nettoPlaca, hideOptional}) => (
   <form>
@@ -114,8 +114,8 @@ const PayResults = ({osnovica, koeficijentPlace, osnovnaPlaca, osnovnaSatnica,
   </form>
 );
 
-PayResults.propTypes = {
+Results.propTypes = {
     osnovica: React.PropTypes.number.isRequired
 };
 
-export {PayResults};
+export {Results};

@@ -2,9 +2,9 @@ import React from 'react';
 import {Grid, Row, Col} from 'react-bootstrap';
 
 import {InputForm} from './InputForm';
-import {PayResults} from './PayResults';
-import {MyHeader} from './MyHeader';
-import {ScrollingContainer} from './ScrollingContainer';
+import {ResultsContainer} from './Results/ResultsContainer';
+import {MyHeaderContainer} from './MyHeader/MyHeaderContainer';
+import {ScrollingPanel} from './ScrollingPanel/ScrollingPanel';
 import {CreditsBar} from './CreditsBar';
 
 import {izracunPlaca} from './izracunPlaca';
@@ -48,20 +48,11 @@ class App extends React.Component {
         );
     }
 
-    showHideNoteCallback = () => {
-        this.setState((prevState) => ({
-                showNote: !prevState.showNote
-            })
-        );
-    }
-
     render () {
 
         return (
             <div>
-                <MyHeader 
-                    showHideNoteCallback={this.showHideNoteCallback} 
-                    showNote={this.state.showNote}/>
+                <MyHeaderContainer />
                 
                 <Grid>
                     <Row>
@@ -69,9 +60,9 @@ class App extends React.Component {
                         <Col xs={0} md={1} lg={2}/>
 
                         <Col xs={5} md={4} lg={3}>
-                            <ScrollingContainer headerText='Parametri' bsStyle={'primary'}>
+                            <ScrollingPanel headerText='Parametri' bsStyle={'primary'}>
                                 <InputForm formCallback={this.formCallback}/>
-                            </ScrollingContainer>
+                            </ScrollingPanel>
                         </Col>
 
 
@@ -79,9 +70,9 @@ class App extends React.Component {
 
 
                         <Col xs={7} md={6} lg={5}>
-                            <ScrollingContainer headerText='Rezultati' showHideOptionalCallback={this.showHideOptionalCallback} >
-                                <PayResults {...this.state.izracunPlaca} hideOptional={this.state.hideOptional}/>
-                            </ScrollingContainer>
+                            <ScrollingPanel headerText='Rezultati' headerButtonActionType='HIDE_OPTIONAL' >
+                                <ResultsContainer {...this.state.izracunPlaca} hideOptional={this.state.hideOptional}/>
+                            </ScrollingPanel>
                         </Col>
                     </Row>
                 </Grid>
