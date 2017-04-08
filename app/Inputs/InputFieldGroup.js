@@ -1,7 +1,7 @@
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
 
-import {FieldGroup} from './FieldGroup';
+import {FieldGroup} from '../FieldGroup';
 
 const InputFieldGroup = ({ ...props }) => (
     <Row>

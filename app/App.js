@@ -1,7 +1,7 @@
 import React from 'react';
 import {Grid, Row, Col} from 'react-bootstrap';
 
-import {InputForm} from './InputForm';
+import {InputForm} from './Inputs/InputForm';
 import {ResultsContainer} from './Results/ResultsContainer';
 import {MyHeaderContainer} from './MyHeader/MyHeaderContainer';
 import {ScrollingPanel} from './ScrollingPanel/ScrollingPanel';

@@ -1,6 +1,5 @@
 import React from 'react';
 import {FormControl, FormGroup, ControlLabel, Checkbox, Radio, Button, Row, Col} from 'react-bootstrap';
-import {FieldGroup} from './FieldGroup';
 
 import {InputFieldGroup} from './InputFieldGroup';
 /*React.PropTypes = {
