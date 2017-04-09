@@ -47,7 +47,7 @@ let InputForm = ({handleSubmit, invalid}) => (
           <InputNumberField name='brojBlagdan' />
         </FieldGroup>
 
-        <FieldGroup label="Stopa prireza (npr 0.18)" >
+        <FieldGroup label="Stopa prireza (npr. 18)" >
           <InputNumberField name='stopaPrireza' />
         </FieldGroup>
 
@@ -108,7 +108,7 @@ const initialValues = {
     brojNedjelja: 0,
     brojPrekovremeni: 0,
     brojBlagdan: 0,
-    stopaPrireza: 0.18,
+    stopaPrireza: 18,
     brojDjece: 0,
     brojUzdrzavanih: 0,
     invalidnost: 'nema',

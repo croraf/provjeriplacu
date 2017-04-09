@@ -117,7 +117,7 @@ function izracunPlaca ( { godineStaza, brojSatiMjesecno, brojNocnih, brojPopodne
     let porez24 = poreznaOsnovica < 17500 ? poreznaOsnovica * 0.24 : 17500 * 0.24 ;
     let porez36 = poreznaOsnovica > 17500 ? ( poreznaOsnovica - 17500 ) * 0.36 : 0; 
     let ukupniPorez = porez24 + porez36;
-    let prirez = ukupniPorez * stopaPrireza;
+    let prirez = ukupniPorez * stopaPrireza / 100;
     let nettoPlaca = dohodak - ukupniPorez - prirez;
 
     return {

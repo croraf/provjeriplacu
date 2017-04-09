@@ -7,15 +7,15 @@ const parseStringToInteger = (stringValue) => {
     return stringValue === '' ? 0 : parseInt(stringValue);
 };
 
-const onChangeValidation = (event, newValue, previousValue) => {
+function validationUpToThousand (event, newValue, previousValue) {
     
     if (newValue === ''){return;}
     else if (! (/^(([0-9]{1,3})?)$/.test(newValue)) ){
         event.preventDefault();
     }
-};
+}
 
-const InputNumberField = ({ name, validate }) => (
+const InputNumberField = ({ name, validate, onChangeValidation }) => (
     <Field 
         component={FormControlWrapper} 
         name={name} 
@@ -24,6 +24,10 @@ const InputNumberField = ({ name, validate }) => (
         validate={validate}
         type='number'/>
 );
+
+InputNumberField.defaultProps = {
+    onChangeValidation: validationUpToThousand
+};
 
 
 export {InputNumberField};
