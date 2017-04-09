@@ -1,8 +1,10 @@
 import React from 'react';
-import {FormControl, FormGroup, ControlLabel, Button, Row, Col, HelpBlock} from 'react-bootstrap';
-import { Field, reduxForm } from 'redux-form';
+import { Button, Row, Col, HelpBlock} from 'react-bootstrap';
+import { reduxForm } from 'redux-form';
 
-import {InputFieldGroup} from './InputFieldGroup';
+import {InputSelectField} from './InputSelectField';
+import {InputNumberField} from './InputNumberField';
+import {FieldGroup} from './FieldGroup';
 /*React.PropTypes = {
 
 }*/
@@ -12,73 +14,69 @@ let validateMjesecniBrojSati = (value) => (value === 0 ? 'Unesi mjesecni fond sa
 let InputForm = ({handleSubmit, invalid}) => (
 
       <form id="mainForm" onSubmit={handleSubmit}>
-        <InputFieldGroup
-          label="Godine Staža"
-          name='godineStaza'
-        />
-        <InputFieldGroup
-          label="Redovan mjesečni fond sati"
-          name='brojSatiMjesecno'
-          infoNote="Ukupni mjesečni fond sati. Jednak za sve službenike."
-          validate={validateMjesecniBrojSati}
-        />
-        <InputFieldGroup
-          label="Broj noćnih sati"
-          name='brojNocnih'
-          infoNote="22h-06h"
-        />
-        <InputFieldGroup
-          label="Broj popodnevnih sati"
-          name='brojPopodne'
-          infoNote="14h-22h"
-        />
-        <InputFieldGroup
-          label="Broj subotnjih sati"
-          name='brojSubota'
-        />
-        <InputFieldGroup
-          label="Broj nedjeljnih sati"
-          name='brojNedjelja'
-        />
-        <InputFieldGroup
-          label="Broj prekovremenih sati"
-          name='brojPrekovremeni'
-        />
-        <InputFieldGroup
-          label="Broj blagdanskih sati"
-          name='brojBlagdan'
-        />
-        <InputFieldGroup
-          label="Stopa prireza (npr 0.18)"
-          name='stopaPrireza'
-        />
-        <InputFieldGroup
-          label="Broj djece"
-          name='brojDjece'
-        />
-        <InputFieldGroup
-          label="Uzdržavani članovi"
-          name='brojUzdrzavanih'
-        />
 
-        <FormGroup controlId="invalidnost">
-          <ControlLabel>Invalidnost</ControlLabel>
-          <FormControl componentClass="select" name='invalidnost' placeholder="select">
-            <option value='nema'>Nema</option>
-            <option value='djelomicna'>Djelomična</option>
-            <option value='stopostotna'>Stopostotna</option>
-          </FormControl>
-        </FormGroup>
+        <FieldGroup label="Godine Staža" >
+          <InputNumberField name='godineStaza' />
+        </FieldGroup>
 
-        <FormGroup controlId="profesija">
-          <ControlLabel>Radno mjesto</ControlLabel>
-          <FormControl componentClass="select" name='profesija' placeholder="select">
-            <option value='lijecnikHMP'>Liječnik HMP</option>
-            <option value='lijecnik'>Liječnik</option>
-            <option value='medicinskiTehnicar'>Medicinski tehničar</option>
-            <option value='vozacHMP'>Vozač HMP</option>
-          </FormControl>
-        </FormGroup>
+        <FieldGroup label="Redovan mjesečni fond sati" infoNote="Ukupni mjesečni fond sati. Jednak za sve službenike." >
+          <InputNumberField name='brojSatiMjesecno' validate={validateMjesecniBrojSati} />
+        </FieldGroup>
+
+        <FieldGroup label="Broj noćnih sati" infoNote="22h-06h" >
+          <InputNumberField name='brojNocnih' />
+        </FieldGroup>
+
+        <FieldGroup label="Broj popodnevnih sati" infoNote="14h-22h" >
+          <InputNumberField name='brojPopodne' />
+        </FieldGroup>
+
+        <FieldGroup label="Broj subotnjih sati" >
+          <InputNumberField name='brojSubota' />
+        </FieldGroup>
+
+        <FieldGroup label="Broj nedjeljnih sati" >
+          <InputNumberField name='brojNedjelja' />
+        </FieldGroup>
+
+        <FieldGroup label="Broj prekovremenih sati" >
+          <InputNumberField name='brojPrekovremeni' />
+        </FieldGroup>
+
+        <FieldGroup label="Broj blagdanskih sati" >
+          <InputNumberField name='brojBlagdan' />
+        </FieldGroup>
+
+        <FieldGroup label="Stopa prireza (npr 0.18)" >
+          <InputNumberField name='stopaPrireza' />
+        </FieldGroup>
+
+        <FieldGroup label="Broj djece" >
+          <InputNumberField name='brojDjece' />
+        </FieldGroup>
+
+        <FieldGroup label="Uzdržavani članovi" >
+          <InputNumberField name='brojUzdrzavanih' />
+        </FieldGroup>
+
+
+        <FieldGroup label='Invalidnost'>
+            <InputSelectField name='invalidnost'>
+                <option value='nema'>Nema</option>
+                <option value='djelomicna'>Djelomična</option>
+                <option value='stopostotna'>Stopostotna</option>
+            </InputSelectField>
+        </FieldGroup>
+
+        <FieldGroup label='Radno mjesto'>
+            <InputSelectField name='profesija'>
+                <option value='lijecnikHMP'>Liječnik HMP</option>
+                <option value='lijecnik'>Liječnik</option>
+                <option value='medicinskiTehnicar'>Medicinski tehničar</option>
+                <option value='vozacHMP'>Vozač HMP</option>
+            </InputSelectField>
+        </FieldGroup>
+
 
         <Row>
           <Col xs={12}>
