@@ -74,9 +74,13 @@ let InputForm = ({handleSubmit, invalid}) => (
                 <option value='lijecnik'>Liječnik</option>
                 <option value='medicinskiTehnicar'>Medicinski tehničar</option>
                 <option value='vozacHMP'>Vozač HMP</option>
+                {/*<option value='drugo'>Druga Profesija...</option>*/}
             </InputSelectField>
         </FieldGroup>
 
+        {/*<FieldGroup label='Koeficijent' infoNote='Unesi ukoliko profesije nema na popisu'>
+          <InputNumberField name='koeficijent' />
+        </FieldGroup>*/}
 
         <Row>
           <Col xs={12}>

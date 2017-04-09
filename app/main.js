@@ -11,13 +11,13 @@ import { createStore } from 'redux';
 
 let store = createStore(rootReducer);
 
-let next = store.dispatch;
+/*let next = store.dispatch;
 store.dispatch = function dispatchAndLog(action) {
     window.console.log('dispatching', action);
     let result = next(action);
     window.console.log('next state', store.getState());
     return result;
-};
+};*/
 
 
 ReactDOM.render(
