@@ -5,6 +5,8 @@ import { reduxForm } from 'redux-form';
 import {InputSelectField} from './InputSelectField';
 import {InputNumberField} from './InputNumberField';
 import {FieldGroup} from './FieldGroup';
+import {validationUpToHundred} from './validationFunctions';
+
 /*React.PropTypes = {
 
 }*/
@@ -48,7 +50,7 @@ let InputForm = ({handleSubmit, invalid}) => (
         </FieldGroup>
 
         <FieldGroup label="Stopa prireza (npr. 18)" >
-          <InputNumberField name='stopaPrireza' />
+          <InputNumberField name='stopaPrireza' onChangeValidation={validationUpToHundred} />
         </FieldGroup>
 
         <FieldGroup label="Broj djece" >
