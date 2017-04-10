@@ -15,12 +15,6 @@ class App extends React.Component {
     formCallback = (formData) => {
 
         this.props.store.dispatch( calculateResultsAction(formData) );
-
-        /*this.props.store.dispatch({
-            type: 'CALCULATIONS_FINISHED',
-            values: izracunPlaca(formData)
-        });*/
-
     }
 
     render () {
