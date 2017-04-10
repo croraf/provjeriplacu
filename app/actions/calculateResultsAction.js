@@ -16,7 +16,7 @@ const calculateResultsAction = (formData) => {
                     values: izracunPlaca(formData)
                 });
             }, 
-            3000
+            1000
         );
 
         

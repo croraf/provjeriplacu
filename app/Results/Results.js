@@ -9,7 +9,7 @@ const Results = ({osnovica, koeficijentPlace, osnovnaPlaca, osnovnaSatnica,
                      dohodak, poreznaOlaksica, poreznaOsnovica, porez24, porez36, ukupniPorez, prirez, nettoPlaca, 
                      hideOptional, calculating}) => (
 
-  calculating ? <Spinner id="spinner_1" active /> :
+  calculating ? <Spinner id="spinner_1" active style={{position: 'absolute', left: 'calc(50% - 20px)', top: '150px'}}/> :
   <form>
     <Row>
       <OutputFieldGroup
