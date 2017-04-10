@@ -6,12 +6,12 @@ import {App} from './App';
 import {rootReducer} from './reducers/rootReducer';
 import {Provider} from 'react-redux';
 import thunkMidleware from 'redux-thunk';
-import logger from 'redux-logger';
+/*import logger from 'redux-logger';*/
 
 import { createStore, applyMiddleware } from 'redux';
 
 
-let store = createStore(rootReducer, applyMiddleware(thunkMidleware, logger));
+let store = createStore(rootReducer, applyMiddleware(thunkMidleware/*, logger*/));
 
 
 ReactDOM.render(
