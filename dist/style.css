@@ -4,8 +4,8 @@
 
 /* The animation code */
 @keyframes example {
-    from {margin-left: -30%;}
-    to {margin-left: 130%;}
+    from {margin-left: -300px;}
+    to {margin-left: calc(100% + 20px);}
 }
 
 #creditsBar{

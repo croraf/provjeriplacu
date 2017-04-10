@@ -7,34 +7,20 @@ import {MyHeaderContainer} from './MyHeader/MyHeaderContainer';
 import {ScrollingPanel} from './ScrollingPanel/ScrollingPanel';
 import {CreditsBar} from './CreditsBar';
 
-import {izracunPlaca} from './izracunPlaca';
+
+import {calculateResultsAction} from './actions/calculateResultsAction';
 
 class App extends React.Component {
-    constructor(){
-        super();
-        this.state = {
-            resultsObject: {}
-        }
-    }
 
     formCallback = (formData) => {
-        
-        /*let formDataObject = {};
-        for (let entry of formData) {
-            console.log(entry);
-            let parsedNumericInput = parseFloat(entry[1]);
-            
-            if (isNaN(parsedNumericInput)){
-                formDataObject[entry[0]] = entry[1];
-            } else {
-                formDataObject[entry[0]] = parsedNumericInput;
-            };
-        }*/
 
+        this.props.store.dispatch( calculateResultsAction(formData) );
 
-        this.setState({
-            resultsObject: izracunPlaca(formData)
-        });
+        /*this.props.store.dispatch({
+            type: 'CALCULATIONS_FINISHED',
+            values: izracunPlaca(formData)
+        });*/
+
     }
 
     render () {
@@ -60,7 +46,7 @@ class App extends React.Component {
 
                         <Col xs={7} md={6} lg={5}>
                             <ScrollingPanel headerText='Rezultati' headerButtonActionType='HIDE_OPTIONAL' >
-                                <ResultsContainer {...this.state.resultsObject} />
+                                <ResultsContainer />
                             </ScrollingPanel>
                         </Col>
                     </Row>

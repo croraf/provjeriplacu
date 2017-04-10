@@ -2,10 +2,14 @@ import React from 'react';
 import {OutputFieldGroup} from './OutputFieldGroup';
 import {Row, Col, Clearfix} from 'react-bootstrap';
 
+import {Spinner} from 'mdl-reactjs';
 
 const Results = ({osnovica, koeficijentPlace, osnovnaPlaca, osnovnaSatnica,
                      dodatnoNocni, dodatnoPopodnevni, dodatnoSubotnji, dodatnoNedjeljni, dodatnoPrekovremeni, dodatnoBlagdanski, brutoPlaca,
-                     dohodak, poreznaOlaksica, poreznaOsnovica, porez24, porez36, ukupniPorez, prirez, nettoPlaca, hideOptional}) => (
+                     dohodak, poreznaOlaksica, poreznaOsnovica, porez24, porez36, ukupniPorez, prirez, nettoPlaca, 
+                     hideOptional, calculating}) => (
+
+  calculating ? <Spinner id="spinner_1" active /> :
   <form>
     <Row>
       <OutputFieldGroup
