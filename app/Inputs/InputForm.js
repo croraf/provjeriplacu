@@ -15,7 +15,7 @@ let validateMjesecniBrojSati = (value) => (value === 0 ? 'Unesi mjesecni fond sa
 
 let InputForm = ({handleSubmit, invalid}) => (
 
-      <form id="mainForm" onSubmit={handleSubmit}>
+      <form id="mainForm" onSubmit={handleSubmit} style={{height: '100%'}}>
 
         <FieldGroup label="Godine Staža" >
           <InputNumberField name='godineStaza' />
@@ -86,8 +86,8 @@ let InputForm = ({handleSubmit, invalid}) => (
 
         <Row>
           <Col xs={12}>
-            <Button type="submit">
-              Calculate
+            <Button type="submit" style={{marginBottom: '10px'}}>
+              Izračunaj
             </Button>
           </Col>
         </Row>

@@ -71,7 +71,7 @@ function izracunPlaca ( { godineStaza, brojSatiMjesecno, brojNocnih, brojPopodne
     }
     
 
-    let osnovica = 5211.20; 
+    let osnovica = 5421.54; 
     let koeficijentPlace = 0; 
     let koeficijentDodatkaNaProfesiju = 0;
     let koeficijentDodatkaNaProfesiju2 = 0;

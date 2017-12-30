@@ -20,15 +20,33 @@ class App extends React.Component {
     render () {
 
         return (
-            <div>
-                <MyHeaderContainer />
+            <div style={{
+                position: 'absolute',
+                top: '0px', bottom: '0px', left: '0px', right: '0px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between'}}
+            >
+
+                <div style={{flexShrink: '0'}}>
+                    <MyHeaderContainer/>
+                </div>
                 
-                <Grid>
-                    <Row>
+                <Grid style={{
+                    flexGrow: '1',
+                    flexShrink: '1',
+                    margin: '0px auto 10px auto',
+                    overflowY: 'hidden',
+                    height: '100%',
+                    width: '100%',
+                    maxWidth: '1300px',
+                    minHeight: '400px'
+                    }}>
+                    <Row style={{height: '100%'}}>
 
                         <Col xs={0} md={1} lg={2}/>
 
-                        <Col xs={5} md={4} lg={3}>
+                        <Col xs={5} md={4} lg={3} style={{height: '100%', paddingBottom: '5px'}}>
                             <ScrollingPanel headerText='Parametri' bsStyle={'primary'}>
                                 <InputForm onSubmit={this.formCallback}/>
                             </ScrollingPanel>
@@ -38,7 +56,7 @@ class App extends React.Component {
                         <Col xs={0} md={0} />
 
 
-                        <Col xs={7} md={6} lg={5}>
+                        <Col xs={7} md={6} lg={5} style={{height: '100%', paddingBottom: '5px'}}>
                             <ScrollingPanel headerText='Rezultati' headerButtonActionType='HIDE_OPTIONAL' >
                                 <ResultsContainer />
                             </ScrollingPanel>
@@ -46,7 +64,9 @@ class App extends React.Component {
                     </Row>
                 </Grid>
 
-                <CreditsBar />
+                <div style={{flexShrink: '0'}}>
+                    <CreditsBar />
+                </div> 
             </div>
         );
     }

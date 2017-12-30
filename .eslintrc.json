@@ -20,7 +20,7 @@
             "error", 4, { "SwitchCase": 1 }
         ],
         "linebreak-style": [
-            "error",
+            0,
             "windows"
         ],
         "quotes": [
@@ -32,7 +32,6 @@
             "always"
         ],
         "react/jsx-uses-react": "error",
-        "react/jsx-uses-vars": "error",
-        "class-property/rule-name": 2
+        "react/jsx-uses-vars": "error"
     }
 }

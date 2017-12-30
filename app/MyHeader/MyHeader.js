@@ -3,11 +3,11 @@ import {PageHeader, Well, Glyphicon} from 'react-bootstrap';
 
 let MyHeader = ({showHideNoteCallback, showNote}) => (
     <Well style={{paddingBottom: '0px', paddingTop: '0px'}}>
-        <PageHeader style={{textAlign: 'center', marginBottom: '0px', marginTop: '0px'}}>
+        <PageHeader style={{textAlign: 'center', marginBottom: '-15px', marginTop: '0px'}}>
             Kalkulator plaće
         </PageHeader>
         
-        {showNote ? (<div style={{textAlign: 'center'}}>
+        {showNote ? (<div style={{textAlign: 'center', fontSize: '16px'}}>
             Primjer: Ukoliko je smjena subota 19:00 do nedjelja 7:00, 
             unosimo 5 sati subote, 7 sati nedjelje te 8 sati noćnog rada. <br />
             Primjer: Ukoliko je smjena ponedjeljak blagdan 7:00-19:00, 

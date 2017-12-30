@@ -8,17 +8,6 @@
     to {margin-left: calc(100% + 20px);}
 }
 
-#creditsBar{
-
-    height: 30px; 
-    background-color: #e8e8e8;
-    padding-top: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-    overflow-x: hidden;
-    margin-top: 5px;
-}
-
 #creditsBarText {
     display: inline-block;
     white-space: nowrap;

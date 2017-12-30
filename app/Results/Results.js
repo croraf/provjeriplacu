@@ -111,7 +111,7 @@ const Results = ({osnovica, koeficijentPlace, osnovnaPlaca, osnovnaSatnica,
         hidden={hideOptional}
       />
       <OutputFieldGroup
-        label="Neto placa"
+        label="Neto plaća"
         value={nettoPlaca}
       />
     </Row>

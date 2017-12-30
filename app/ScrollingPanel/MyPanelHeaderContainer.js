@@ -7,6 +7,10 @@ let mapDispatchToProps = (dispatch, ownProps) => ({
     buttonClickHandler: ownProps.actionType ? () => dispatch({type: ownProps.actionType}) : undefined
 });
 
-let MyPanelHeaderContainer = connect(undefined, mapDispatchToProps)(MyPanelHeader);
+const mapStateToProps = (state) => ({
+    hideOptional: state.hideOptional
+});
+
+let MyPanelHeaderContainer = connect(mapStateToProps, mapDispatchToProps)(MyPanelHeader);
 
 export {MyPanelHeaderContainer};

@@ -1,5 +1,4 @@
 import React from 'react';
-import {Panel, Button} from 'react-bootstrap';
 
 class CreditsBar extends React.Component {
     constructor (){
@@ -18,10 +17,20 @@ class CreditsBar extends React.Component {
         };*/
 
         return(
-            <div id='creditsBar'>
+            <div style={{
+                height: '30px', 
+                backgroundColor: '#e8e8e8',
+                paddingTop: '5px',
+                marginLeft: '10px',
+                marginRight: '10px',
+                overflowX: 'hidden',
+                marginTop: '5px'
+            }}>
+
                 <span id='creditsBarText'> 
-                    Credits: Vedran Rafaelic, Petar Beslic 
+                    Credits: Vedran Rafaelic (vrafaeli@msn.com), Petar Beslic 
                 </span>
+                
             </div>
         );
     }
