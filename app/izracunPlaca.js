@@ -4,6 +4,8 @@ function izracunPlaca ( { godineStaza, brojSatiMjesecno, brojNocnih, brojPopodne
 
     let olaksicaZaDjecu;
 
+    console.log('godine staza:', godineStaza);
+
     switch (brojDjece) {
         case 0:
             olaksicaZaDjecu = 0;

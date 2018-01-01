@@ -5,7 +5,7 @@ import {FormControlWrapper} from './FormControlWrapper';
 import {validationUpToThousand} from './validationFunctions';
 
 const parseStringToInteger = (stringValue) => {
-    return stringValue === '' ? 0 : parseInt(stringValue);
+    return stringValue === '' ? '' : parseInt(stringValue);
 };
 
 

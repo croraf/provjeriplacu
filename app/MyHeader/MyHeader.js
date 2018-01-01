@@ -3,8 +3,8 @@ import {PageHeader, Well, Glyphicon} from 'react-bootstrap';
 
 let MyHeader = ({showHideNoteCallback, showNote}) => (
     <Well style={{paddingBottom: '0px', paddingTop: '0px'}}>
-        <PageHeader style={{textAlign: 'center', marginBottom: '-15px', marginTop: '0px'}}>
-            Kalkulator plaće
+        <PageHeader style={{textAlign: 'center', marginBottom: '-20px', marginTop: '0px'}}>
+            {navigator.userAgent.match(/Android/i) ? <h2>Kalkulator plaće</h2> : 'Kalkulator plaće'}
         </PageHeader>
         
         {showNote ? (<div style={{textAlign: 'center', fontSize: '16px'}}>

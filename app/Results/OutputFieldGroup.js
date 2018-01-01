@@ -10,7 +10,7 @@ const OutputFieldGroup = ({ id, label, value, hidden }) => (
                 <ControlLabel>
                     {label}
                 </ControlLabel>
-                <FormControl type='text' placeholder='Result' readOnly value={value ? value.toFixed(2) : value} />
+                <FormControl type='text' placeholder='Rezultat' readOnly value={value ? value.toFixed(2) : value} />
             </FormGroup>
         </Col>
     )

@@ -1,6 +1,8 @@
 
 function validationUpToThousand (event, newValue, previousValue) {
     
+    console.log(event, newValue, previousValue);
+    
     if (newValue === ''){return;}
     else if (! (/^(([0-9]{1,3})?)$/.test(newValue)) ){
         event.preventDefault();
