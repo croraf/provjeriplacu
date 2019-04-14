@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid, Row, Col} from 'react-bootstrap';
+import {Grid, Row, Col, Button} from 'react-bootstrap';
 
 import {InputForm} from './Inputs/InputForm';
 import {ResultsContainer} from './Results/ResultsContainer';
@@ -16,6 +16,16 @@ class App extends React.Component {
 
         this.props.store.dispatch( calculateResultsAction(formData) );
     }
+
+    /* getGeoLocation = () => {
+        
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                console.log(position);
+                this.props.store.dispatch({type: 'GEOLOCATION', position: position});
+            }
+        );
+    } */
 
     render () {
 
@@ -43,6 +53,7 @@ class App extends React.Component {
                     minHeight: '400px'
                     }}>
                     <Row style={{height: '100%'}}>
+                        {/* <Button onClick={this.getGeoLocation}>Rafa</Button> */}
 
                         <Col xs={0} md={1} lg={2}/>
 
