@@ -8,10 +8,10 @@ import { reducer as formReducer } from 'redux-form';
 
 
 let rootReducer = combineReducers({
-    showNote,
-    hideOptional,
-    form: formReducer,
-    results
+  showNote,
+  hideOptional,
+  form: formReducer,
+  results
 });
 
 export {rootReducer};

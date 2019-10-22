@@ -5,23 +5,23 @@ import {FormControlWrapper} from './FormControlWrapper';
 import {validationUpToThousand} from './validationFunctions';
 
 const parseStringToInteger = (stringValue) => {
-    return stringValue === '' ? '' : parseInt(stringValue);
+  return stringValue === '' ? '' : parseInt(stringValue);
 };
 
 
 
 const InputNumberField = ({ name, validate, onChangeValidation }) => (
-    <Field 
-        component={FormControlWrapper} 
-        name={name} 
-        onChange={onChangeValidation} 
-        parse={parseStringToInteger} 
-        validate={validate}
-        type='number'/>
+  <Field 
+    component={FormControlWrapper} 
+    name={name} 
+    onChange={onChangeValidation} 
+    parse={parseStringToInteger} 
+    validate={validate}
+    type='number'/>
 );
 
 InputNumberField.defaultProps = {
-    onChangeValidation: validationUpToThousand
+  onChangeValidation: validationUpToThousand
 };
 
 

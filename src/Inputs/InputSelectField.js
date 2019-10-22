@@ -5,9 +5,9 @@ import {FormControlWrapper} from './FormControlWrapper';
 
 
 const InputSelectField = ({ name, children }) => (
-    <Field component={FormControlWrapper} componentClass='select' name={name}>
-        {children}
-    </Field>
+  <Field component={FormControlWrapper} componentClass='select' name={name}>
+    {children}
+  </Field>
 );
 
 

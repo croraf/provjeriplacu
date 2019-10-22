@@ -17,16 +17,6 @@ class App extends React.Component {
         this.props.store.dispatch( calculateResultsAction(formData) );
     }
 
-    /* getGeoLocation = () => {
-        
-        navigator.geolocation.getCurrentPosition(
-            (position) => {
-                console.log(position);
-                this.props.store.dispatch({type: 'GEOLOCATION', position: position});
-            }
-        );
-    } */
-
     render () {
 
         return (

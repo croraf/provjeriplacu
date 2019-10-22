@@ -8,13 +8,13 @@ import {onScrollCallbacks} from './ScrollingPanel/scrollingPanelUtils';
 
 class MyOverlayTrigger extends OverlayTrigger {
 
-    componentDidMount() {
-        super.componentDidMount();
+  componentDidMount() {
+    super.componentDidMount();
 
-        onScrollCallbacks.push(
-            () => {this.handleHide();}
-        );
-    }
+    onScrollCallbacks.push(
+      () => {this.handleHide();}
+    );
+  }
 }
 
 export {MyOverlayTrigger};

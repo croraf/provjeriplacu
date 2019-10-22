@@ -4,20 +4,20 @@ import {InfoGlyph} from '../InfoGlyph';
 
 
 const FieldGroup = ({ id, label, infoNote, children }) => (
-    <Row>
-        <Col xs={12}>
-            <FormGroup controlId={id}>
+  <Row>
+    <Col xs={12}>
+      <FormGroup controlId={id}>
 
-                <ControlLabel>
-                    {label}
-                    {infoNote ? <InfoGlyph infoNote={infoNote}/> : null}
-                </ControlLabel>
+        <ControlLabel>
+          {label}
+          {infoNote ? <InfoGlyph infoNote={infoNote}/> : null}
+        </ControlLabel>
                 
-                {children}
+        {children}
 
-            </FormGroup>
-        </Col>
-    </Row>
+      </FormGroup>
+    </Col>
+  </Row>
 );
 
 
