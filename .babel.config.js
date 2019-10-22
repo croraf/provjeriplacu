@@ -1,10 +1,10 @@
-module.exports = {
+/* module.exports = {
  "presets": [
   "es2015",
   "react"
  ],
  "plugins": ["transform-object-rest-spread", "transform-class-properties"]
-};
+}; */
 
 const presets = [
   [
@@ -19,7 +19,10 @@ const presets = [
       useBuiltIns: "usage",
     },
   ],
-  ['react']
+  ['@babel/preset-react'],
 ];
 
-module.exports = { presets };
+const plugins = [
+  ["@babel/plugin-proposal-class-properties",],
+]
+module.exports = { presets, plugins };

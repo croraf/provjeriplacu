@@ -1,4 +1,5 @@
 const path = require('path');
+const babelConfig = require('./.babel.config.js');
 
 module.exports = {
     devtool: 'inline-source-map',
@@ -16,12 +17,14 @@ module.exports = {
         rules: [
             {
                 test: /\.jsx?$/,
-                include: path.resolve(__dirname, 'app'),
-                use: 'babel-loader'
+                exclude: /(node_modules)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: babelConfig,
+                }
             },
             {
                 test: /\.scss$/,
-                include: path.resolve(__dirname, 'app'), 
                 use: [
                     {loader: 'style-loader'},
                     {loader: 'css-loader', options: { modules: true}},
@@ -31,7 +34,6 @@ module.exports = {
             {
                 /* legacy css from node_modules should not have css-loader modules enabled */
                 test: /\.css$/,
-                include: [path.resolve(__dirname, 'node_modules'), path.resolve(__dirname, 'app')],
                 use: [
                     {loader: 'style-loader'},
                     {loader: 'css-loader'} 
