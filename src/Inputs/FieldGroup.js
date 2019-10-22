@@ -2,7 +2,6 @@ import React from 'react';
 import {FormGroup, ControlLabel, Row, Col} from 'react-bootstrap';
 import {InfoGlyph} from '../InfoGlyph';
 
-
 const FieldGroup = ({ id, label, infoNote, children }) => (
   <Row>
     <Col xs={12}>

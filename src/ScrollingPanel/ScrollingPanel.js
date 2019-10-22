@@ -2,9 +2,7 @@ import React from 'react';
 import {Panel} from 'react-bootstrap';
 
 import {MyPanelHeaderContainer} from './MyPanelHeaderContainer';
-
 import './ScrollingPanel.css';
-
 import {onScrollCallbacks} from './scrollingPanelUtils';
 
 class ScrollingPanel extends React.Component {
@@ -14,7 +12,6 @@ class ScrollingPanel extends React.Component {
     const scrollPanel = document.getElementsByClassName('panel-body')[0];
 
     scrollPanel.onscroll = () => {
-            
       onScrollCallbacks.forEach(callback => {
         callback();
       });
@@ -22,7 +19,6 @@ class ScrollingPanel extends React.Component {
   }
     
   render () {
-
     const { children, headerText, bsStyle, headerButtonActionType } = this.props;
         
     return (

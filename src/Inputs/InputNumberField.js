@@ -9,7 +9,6 @@ const parseStringToInteger = (stringValue) => {
 };
 
 
-
 const InputNumberField = ({ name, validate, onChangeValidation }) => (
   <Field 
     component={FormControlWrapper} 

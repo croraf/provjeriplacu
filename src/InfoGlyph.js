@@ -3,21 +3,17 @@ import {Glyphicon, Tooltip} from 'react-bootstrap';
 
 import {MyOverlayTrigger} from './MyOverlayTrigger';
 
-
 const MyTooltip = (infoNote) => (
   <Tooltip id="tooltip">{infoNote}</Tooltip>
 );
 
-class InfoGlyph extends React.Component {
-  render () {
+const InfoGlyph = ({infoNote}) => {
 
-    const {infoNote} = this.props;
-    return (
-      <MyOverlayTrigger placement="right" overlay={MyTooltip(infoNote)} container={undefined}>
-        <Glyphicon glyph="glyphicon glyphicon-info-sign" />
-      </MyOverlayTrigger>
-    );
-  }
-}
+  return (
+    <MyOverlayTrigger placement="right" overlay={MyTooltip(infoNote)} container={undefined}>
+      <Glyphicon glyph="glyphicon glyphicon-info-sign" />
+    </MyOverlayTrigger>
+  );
+};
 
 export {InfoGlyph};

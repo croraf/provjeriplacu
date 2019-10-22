@@ -1,7 +1,6 @@
 import React from 'react';
 import {FormControl, HelpBlock} from 'react-bootstrap';
 
-
 function FormControlWrapper({ input, meta, type, componentClass, children }) {
   return (
     <div>

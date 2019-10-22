@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 import { InputForm } from './Inputs/InputForm';
 import { ResultsContainer } from './Results/ResultsContainer';
-import { MyHeaderContainer } from './MyHeader/MyHeaderContainer';
+import MyHeader from './MyHeader/MyHeader';
 import { ScrollingPanel } from './ScrollingPanel/ScrollingPanel';
 import { CreditsBar } from './CreditsBar';
 
@@ -24,7 +24,7 @@ const App = ({ store, }) => {
     }}
     >
       <div style={{ flexShrink: '0' }}>
-        <MyHeaderContainer />
+        <MyHeader />
       </div>
 
       <Grid style={{
