@@ -6,14 +6,14 @@ module.exports = {
   },
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "parserOptions": {
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
-      "jsx": true
-    },
+    "ecmaVersion": 9,
     "sourceType": "module"
   },
+  settings: {
+    react: {version: 'detect'},
+  },
   "plugins": [
-    "react", "class-property"
+    "react", "babel"
   ],
   "rules": {
     "indent": [
@@ -33,5 +33,6 @@ module.exports = {
     ],
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
+    "react/prop-types": 0,
   }
 };

@@ -1,5 +1,3 @@
-import React from 'react';
-
 /* HACK FOR hiding tooltips on inputs container scroll, because of bug. */
 
 import {OverlayTrigger} from 'react-bootstrap';

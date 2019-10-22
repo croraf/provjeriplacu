@@ -9,7 +9,7 @@ function validationUpToThousand (event, newValue, previousValue) {
   }
 }
 
-function validationUpToHundred (event, newValue, previousValue) {
+function validationUpToHundred (event, newValue) {
     
   if (newValue === ''){return;}
   else if (! (/^(([0-9]{1,2})?)$/.test(newValue)) ){
