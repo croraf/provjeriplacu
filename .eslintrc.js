@@ -13,7 +13,7 @@ module.exports = {
     react: {version: 'detect'},
   },
   "plugins": [
-    "react", "babel"
+    "babel", "react", 
   ],
   "rules": {
     "indent": [
