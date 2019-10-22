@@ -7,9 +7,9 @@ import {rootReducer} from './reducers/rootReducer';
 import {Provider} from 'react-redux';
 import thunkMidleware from 'redux-thunk';
 /*import logger from 'redux-logger';*/
-
 import { createStore, applyMiddleware } from 'redux';
 
+import './style.css';
 
 let store = createStore(rootReducer, applyMiddleware(thunkMidleware/*, logger*/));
 

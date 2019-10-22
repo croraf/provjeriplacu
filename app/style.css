@@ -8,15 +8,16 @@
     to {margin-left: calc(100% + 20px);}
 }
 
-#creditsBarText {
+.creditsBarText {
     display: inline-block;
     white-space: nowrap;
-    animation-name: example;
+    margin: auto;
+    /* animation-name: example;
     animation-duration: 30s;
     animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    //position: relative;
-    //padding-left: this.state.paddingLeft + '%'
+    animation-iteration-count: infinite; */
+    /* position: relative;
+    padding-left: this.state.paddingLeft + '%'; */
 }
 
 /*body {

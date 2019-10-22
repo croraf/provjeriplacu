@@ -21,15 +21,15 @@ class CreditsBar extends React.Component {
                 height: '30px', 
                 backgroundColor: '#e8e8e8',
                 paddingTop: '5px',
-                marginLeft: '10px',
-                marginRight: '10px',
                 overflowX: 'hidden',
-                marginTop: '5px'
+                marginTop: '5px',
+                display: 'flex',
+                justifyContent: 'center',
             }}>
 
-                <span id='creditsBarText'> 
+                <div className='creditsBarText'> 
                     Credits: Vedran Rafaelic (vrafaeli@msn.com), Petar Beslic 
-                </span>
+                </div>
                 
             </div>
         );
