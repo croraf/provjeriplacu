@@ -17,7 +17,7 @@ let MyHeader = ({showHideNoteCallback, showNote}) => (
             <Glyphicon 
                 glyph={showNote ? 'glyphicon glyphicon-arrow-up' : 'glyphicon glyphicon-arrow-down'} 
                 onClick={showHideNoteCallback} 
-                style={{marginTop: '2px'}}/>
+                style={{marginTop: '2px', cursor: 'pointer'}}/>
         </div>
     </Well>
 );
