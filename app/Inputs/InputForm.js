@@ -7,10 +7,6 @@ import {InputNumberField} from './InputNumberField';
 import {FieldGroup} from './FieldGroup';
 import {validationUpToHundred} from './validationFunctions';
 
-/*React.PropTypes = {
-
-}*/
-
 let validateMjesecniBrojSati = (value) => (value === 0 ? 'Unesi mjesecni fond sati' : undefined);
 
 let InputForm = ({handleSubmit, invalid}) => (
